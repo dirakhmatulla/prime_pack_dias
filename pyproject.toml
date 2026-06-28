@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prime_pack_dias"
+version = "0.1.0"
+description = "HW05 — prime numbers pipeline: generate, shuffle, checksum"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+]
+
+[project.scripts]
+prime_pack_dias = "prime_pack_dias.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["prime_pack_dias"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
